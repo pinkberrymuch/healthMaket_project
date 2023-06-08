@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+
+  <title>index</title>
+</head>
+<body>
+ <div id="page">
+   <!--header 영역 시작 -->
+   <header>
+    <!--헤더 탑 오른쪽 메뉴 부분 탑 메뉴-->
+    <div class="util">
+      <ul>
+        <li><a href="../front/login.html">로그인</a></li>
+        <li><a href="../front/joinAgree.html">회원가입</a></li>
+        <li><a href="#">주문조회</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+    </div>
+    <!--e 헤더 탑 오른쪽 메뉴 부분 탑 메뉴  -끝-  -->
+
+    <!--로고 , 검색탕 , 마이메뉴 영역-->
+    <div id="center-top">
+      <div class="logo"><a href="../front/index.html"><img src="../front/images/banners/logo.JPG"></a></div>
+      <!-- 검색 창 -->
+      <div class="header-search">
+        <div class="top-search">
+            <input  type="search" class="input-search" name="rankKeyword" value="" autocomplete="off"
+              placeholder      = "체지방만 남기고 갔더라 ㅠㅠ"
+              maxlength="100"/>
+            <button type="button" class="btn-top-search" name="btnTopSearch" data-search-type="real">
+                <span class="blind">➤</span>
+            </button>
+        </div>
+      </div>
+      <!-- 검색 창  -끝- -->
+      <!-- 마이메뉴 아이콘 -->
+      <div class="myMenu">
+        <table>
+           <td><a href="../front/couponPage.html"><img class="myMenu-img" src="../front/images/icon/coupon.PNG"></a></td>
+           <td> </td>
+           <td><a href=""><img class="myMenu-img" src="../front/images/icon/user.PNG"></a></td>
+           <td> </td>
+           <td><a href=""><img class="myMenu-img" src="../front/images/icon/cart.PNG"></a></td>
+        </table>
+      </div>
+      <!-- 마이메뉴 아이콘 -끝- -->
+    </div>
+    <!--로고 , 검색창 , 마이메뉴 영역  -끝- -->
+
+    <!--메인 카테고리 -->
+    <div id="main-category">
+      <table class="category-table">
+        <tr>
+          <td><a href="#" >식단 관리</a></td>
+          <td><a href="#" >이달의 특가</a></td>
+          <td><a href="#" >TENTEN 타임딜</a></td>
+          <td><a href="#" >혜택 정리</a></td>
+          <td><a href="#" >이벤트</a></td>
+          <td><a href="#" >브랜드관</a></td>
+          <td><a href="#" ><img src="../front/images/banners/star.JPG" width="90px"></a></td>
+        </tr>
+      </table>
+    </div>
+    <!--메인 카테고리  -끝- -->
+   </header>
+   <!--header 영역 끝 -->
+   <hr class="im-HR">
+
+   <!--main 영역 시작 -->
+   <main>
+      <!--슬라이드 이벤트 배너 -->
+      <div id="slideShow">
+        <div id="slides">
+          <a href="#"><img src="../front/images/banners/timedill.JPG" alt="time-dill"></a>
+          <a href="#"><img src="../front/images/banners/standingorder.JPG" alt="salad-banner"></a>
+          <a href="#"><img src="../front/images/banners/deliverybanner.jpg" alt="delivery-banner"></a>
+        </div>
+      </div>  
+      <script id="slideShow">
+        var current = 0;  
+        showSlides();  
+  
+        function showSlides() {
+          var slides = document.querySelectorAll("#slides > a > img");  
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          current++; // 다음 이미지로 이동
+          if(current > slides.length)  // 마지막 이미지라면
+            current = 1;   // 첫 번째로 이동
+          slides[current - 1 ].style.display = "block";  // 현재 위치 이미지 표시
+          setTimeout(showSlides,3500);   // 3.5초마다 showSlides 반복 
+        }
+      </script>
+      <!--슬라이드 이벤트 배너 -끝- -->
+
+      <!--일러스트 아이콘 카테고리-->
+      <div class="icon-category">
+        <table class="icon-category-table">
+          <thead>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/giftC.JPG"></a></th>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/chickenC.JPG"></a></th>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/saladC.JPG"></a></th>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/proteinC.JPG"></a></th>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/appleC.JPG"></a></th>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/campingC.PNG"></a></th>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/snackC.JPG"></a></th>
+            <th><a href="#"><img class="icon-category-table-img" src="../front/images/icon/etcC.PNG"></a></th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#" >&nbsp;&nbsp;선물 하기</a></td>
+              <td><a href="#" >&nbsp;&nbsp;닭가슴살</a></td>
+              <td><a href="#" >&nbsp;&nbsp;&nbsp;&nbsp;샐러드</a></td>
+              <td><a href="#" >단백질 드링크</a></td>
+              <td><a href="#" >디톡스 과일</a></td>
+              <td><a href="#" >캠핑 다이어트</a></td>
+              <td><a href="#" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;간식&nbsp;&nbsp;</a></td>
+              <td><a href="#" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기타&nbsp;&nbsp;</a></td>
+            </tr>
+          </tbody> 
+        </table>
+      </div>
+      <!--일러스트 아이콘 카테고리 -끝- -->
+
+      <!-- MD Pick 추천상품 -->
+      <div class="md-pick-prod">
+        <h2 style="color: rgb(36, 36, 36);">MD Pick 추천 상품</h2>
+        <table class="md-pick-prod-table">
+          <tr>
+            <td> </td>
+            <td>
+              <div class="md-pick-prod-photo">
+                <img src="../front/images/mdpick/mdpick1.JPG" />
+              </div>
+              <div class="photo-caption1">
+                <p><b>저염식 할사람! &nbsp;&nbsp;저염~</b></p>
+              </div>
+              <div class="photo-caption2">
+                <p>염분은 쫙 빼고, 맛은 더했어요</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="md-pick-prod-photo">
+                <img src="../front/images/mdpick/mdpick2.png" />
+              </div>
+              <div class="photo-caption1">
+                <p><b>운동은 장비빨, 겜성 텀블러</b></p>
+              </div>
+              <div class="photo-caption2">
+                <p>휴대성 좋고 심플한 텀블러</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="md-pick-prod-photo">
+                <img src="../front/images/protein/protein1.png" />
+              </div>
+              <div class="photo-caption1">
+                <p><b>한 스푼으로 단백질 충전</b></p>
+              </div>
+              <div class="photo-caption2">
+                <p>프로틴 쉐이크</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="md-pick-prod-photo">
+                <img src="../front/images/mdpick/mdpick3.png" />
+              </div>
+              <div class="photo-caption1">
+                <p><b>우리의 바삭한 첫 만남</b></p>
+              </div>
+              <div class="photo-caption2">
+                <p>크리스피 닭가슴살</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- MD Pick 추천상품 -끝- -->
+
+      <!-- 카테고리(캠핑)-->
+      <div class="category-camping">
+        <table class="category-camping-table">
+          <tr>
+            <td>
+              <h3 style="color: rgb(64, 82, 72);">캠핑 가서도<br> 관리는 포기 못해	</h3><br><br>
+              <MARQUEE><h1> &#128663;</h1></MARQUEE><br><br><br><br><br><br>
+            </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/camping/camping1.JPG" />
+              </div>
+              <div class="delivery-photo-caption">
+                <img src="../front/images/banners/star.JPG" width="70px"/>
+              </div>
+              <div class="photo-caption-title">
+                <p>닭가슴살 프랑크 소시지 훈제 100g</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>19,500<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>1팩당 : 1,646원 ~ 1,950원</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/camping/camping2.JPG" />
+              </div>
+              <div class="delivery-photo-caption">
+                 &nbsp;
+              </div>
+              <div class="photo-caption-title">
+                <p>빼요빼요 나베 밀키트 1035g</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>22,900<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>1팩당 : 22,900원</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/camping/camping4.JPG" />
+              </div>
+              <div class="delivery-photo-caption">
+               &nbsp;
+              </div>
+              <div class="photo-caption-title">
+                <p>싹다BEER 제로맥주 350ml</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p><span class="sale-info-font1">18%</span> 17,400<span class="small-font">원 </span><span class="sale-info-font2"> 21,000</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>1캔당 : 2,900원</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- 카테고리(캠핑) -끝- -->
+
+      <!-- 카테고리(샐러드)-->
+      <div class="category-salad">
+        <h2 style="color: rgb(36, 36, 36);">아삭아삭 클래식 샐러드 &#127807;</h2>
+        <table class="category-salad-table">
+          <tr>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/salads/salad1.JPG" />
+              </div>
+              <div class="delivery-photo-caption">
+                <img src="../front/images/banners/star.JPG" width="70px"/>
+              </div>
+              <div class="photo-caption-title">
+                <p>유러피안 샐러드</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p><span class="sale-info-font1">31%</span> 9,600<span class="small-font">원 </span><span class="sale-info-font2"> 13,720</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>1팩당 : 2,250원 ~ 2,400원</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/salads/salad2.PNG" />
+              </div>
+              <div class="delivery-photo-caption">
+                <img src="../front/images/banners/star.JPG" width="70px"/>
+              </div>
+              <div class="photo-caption-title">
+                <p>고구마 샐러드 100g</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>28,700<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>1팩당 : 2,870원</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/salads/salad3.PNG" />
+              </div>
+              <div class="delivery-photo-caption">
+                <img src="../front/images/banners/star.JPG" width="70px"/>
+              </div>
+              <div class="photo-caption-title">
+                <p>옥수수 샐러드</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>13,400<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>1팩당 : 2,667원 ~ 2,680원</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/salads/salad4.png" />
+              </div>
+              <div class="delivery-photo-caption">
+                <img src="../front/images/banners/star.JPG" width="70px"/>
+              </div>
+              <div class="photo-caption-title">
+                <p>단호박 샐러드</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>15,300<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>1팩당 : 5,100원</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <input class="all-view-btn" type="button" value="전체 보기 >" />
+      </div>
+      <!-- 카테고리(샐러드) -끝- -->
+      
+      <!-- 카테고리(기타 소모품) -->
+      <div class="category-etc">
+        <h2 style="color: rgb(36, 36, 36);">오.운.완 &#128077;</h2>
+        <table class="category-etc-table">
+          <tr>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/etc/etc1.JPG" />
+              </div>
+              <div class="delivery-photo-caption">
+                &nbsp;
+              </div>
+              <div class="photo-caption-title">
+                <p>오늘부터 라텍스 밴드</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p><span class="sale-info-font1">30%</span> 4,600<span class="small-font">원 </span><span class="sale-info-font2"> 15,400</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>택 1</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/etc/etc2.png" />
+              </div>
+              <div class="delivery-photo-caption">
+                &nbsp;
+              </div>
+              <div class="photo-caption-title">
+                <p>필라테스 짐볼 pink</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>22,700<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                <p>공기 주입기 별도 구매</p>
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/etc/etc3.png" />
+              </div>
+              <div class="delivery-photo-caption">
+                &nbsp;
+              </div>
+              <div class="photo-caption-title">
+                <p>으쌰으쌰 덤벨 5kg *2</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>17,000<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                &nbsp;
+              </div>
+            </td>
+            <td> </td>
+            <td>
+              <div class="category-photo">
+                <img src="../front/images/etc/etc4.png" />
+              </div>
+              <div class="delivery-photo-caption">
+                &nbsp;
+              </div>
+              <div class="photo-caption-title">
+                <p>운동 욕구 상승 헬스장갑 2p</p>
+              </div>
+              <div class="photo-caption-prise">
+                <p>23,300<span class="small-font">원</span></p>
+              </div>
+              <div class="photo-caption-info">
+                &nbsp;
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- 카테고리(기타 소모품) -끝- -->
+   </main>
+   <!--main 영역 끝 -->
+
+   <!--footer 영역 시작-->
+   <footer id="footer" class="footer">
+      <div class="footer-menu">
+        <div class="frame-sm">
+          <ul class="footer-menu-list">
+            <li> </li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#" class="text-black2 text-md">개인정보처리방침</a></li>
+          </ul><!--// footer-menu-list -->
+        </div><!--// footer-info-list -->
+      </div><!--// frame-sm -->
+      <div class="footer-info">
+        <strong class="footer-logo"><img src="../front/images/banners/logo.JPG" width="90px"></strong>
+        <div class="colum-info">
+          <h5 class="blind">회사 정보</h5>
+          <ul class="footer-biz-info">
+            <li><span class="company-name">(주)빼요 건강 LAB</span></li>
+            <li>대표 : 이소영</li>
+            <li>주소 : 별별특별시 지구 빼야지로 129,11 고양이버스타워</li>
+            <li>사업자등록번호 : 111-22-00000
+              <span class="biz-information">
+                <a href="#">사업자정보 확인</a>
+              </span>
+            </li>
+            <li>통신판매업신고번호 : 제1호</li>
+            <li>개인정보보호책임자 : 이우니</li>
+          </ul>
+          <p class="copyright">Copyright©빼요마켓 All rights reserved.</p>
+        </div><!--// colum -->
+        <div class="colum-info">
+          <ul class="customer-info">
+            <li class="cscenter">고객센터 <em class="footer-tel">02-1111-1111</em></li>
+            <li>FAX. 02-1111-0000</li>
+            <li>E-mail. admin@bbyo.com</li>
+          </ul>
+          <div class="customer-btns">
+            <a href="#"><span>고객 불편 사항</span></a>
+            <a href="#"><span>1:1문의</span></a>
+          </div>
+        </div><!--// colum -->
+      </div><!--// footer-info -->
+      <div class="footer-bottom">
+        <ul class="service-txt">
+          <li><a href="#"><i class="ico-footer-service01"></i>정보보호 관리체계 인증 획득</a></li>
+          <li><a href="#"><i class="ico-footer-service02"></i>은행 구매 안전 서비스 가입사실 확인</a></li>
+        </ul>
+      </div>
+    </footer>
+ </div>
+</body>
+</html>

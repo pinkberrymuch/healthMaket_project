@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="../front/JS/join.js"></script>
+  <link rel="stylesheet" href="css/join.css">
+  <title>join</title>
+</head>
+<body>
+ <div id="page">
+   <!--header 영역 시작 -->
+   <header>
+    <!--헤더 탑 오른쪽 메뉴 부분 탑 메뉴-->
+    <div class="util">
+      <ul>
+        <li><a href="../front/login.html">로그인</a></li>
+        <li><a href="../front/joinAgree.html">회원가입</a></li>
+        <li><a href="#">주문조회</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+    </div>
+    <!--e 헤더 탑 오른쪽 메뉴 부분 탑 메뉴  -끝-  -->
+
+    <!--로고 , 검색탕 , 마이메뉴 영역-->
+    <div id="center-top">
+      <div class="logo"><a href="../front/index.html"><img src="../front/images/banners/logo.JPG"></a></div>
+      <!-- 검색 창 -->
+      <div class="header-search">
+        <div class="top-search">
+            <input  type="search" class="input-search" name="rankKeyword" value="" autocomplete="off"
+              placeholder      = "50,000이상 구입하면 바디프로필 상품권 주는거 실화인가요?"
+              maxlength="100"/>
+            <button type="button" class="btn-top-search" name="btnTopSearch" data-search-type="real">
+                <span class="blind">➤</span>
+            </button>
+        </div>
+      </div>
+      <!-- 검색 창  -끝- -->
+      <!-- 마이메뉴 아이콘 -->
+      <div class="myMenu">
+        <table>
+           <td><a href="../front/couponPage.html"><img class="myMenu-img" src="../front/images/icon/coupon.PNG"></a></td>
+           <td> </td>
+           <td><a href=""><img class="myMenu-img" src="../front/images/icon/user.PNG"></a></td>
+           <td> </td>
+           <td><a href=""><img class="myMenu-img" src="../front/images/icon/cart.PNG"></a></td>
+        </table>
+      </div>
+      <!-- 마이메뉴 아이콘 -끝- -->
+    </div>
+    <!--로고 , 검색창 , 마이메뉴 영역  -끝- -->
+
+    <!--메인 카테고리 -->
+    <div id="main-category">
+      <table class="category-table">
+        <tr>
+          <td><a href="#" >식단 관리</a></td>
+          <td><a href="#" >이달의 특가</a></td>
+          <td><a href="#" >TENTEN 타임딜</a></td>
+          <td><a href="#" >혜택 정리</a></td>
+          <td><a href="#" >이벤트</a></td>
+          <td><a href="#" >브랜드관</a></td>
+          <td><a href="#" ><img src="../front/images/banners/star.JPG" width="90px"></a></td>
+        </tr>
+      </table>
+    </div>
+    <!--메인 카테고리  -끝- -->
+   </header>
+   <!--header 영역 끝 -->
+   <hr class="im-HR">
+
+   <!--main 영역 시작 -->
+   <main>
+      <div id="contentBox">
+        <fieldset>
+          <h2 style="font-size: 24px; color: #424140;">회원 가입</h2>
+          <div>
+            <table>
+              <th>
+                <p>사이트 이용정보 입력</p>
+              </th>
+              <tr>
+                <td><input id="user_id" type="text" name="user_id" required placeholder="아이디"></td>
+                <td></td><td><button type="button" id="idCheckBtn">중복 확인</button></td>
+              </tr>
+              <tr>
+                <td><p id="idcheck"></p></td>
+              </tr>
+
+                <tr>
+                <td><input id="user_name" type="text" name="user_name" required placeholder="이름"></td>
+              </tr>
+              <tr>
+                <td><input id="user_password" type="password" name="user_password" placeholder="비밀번호" required></td>
+              </tr>
+              <tr></tr>
+                <th>
+                <p>개인정보 입력</p>
+              </th>
+              <tr>
+                <td><input id="user_email" type="text" name="user_email" placeholder="이메일"></td>
+              </tr>
+              <tr>
+              <td><input id="user_phone" type="text" name="user_phone" placeholder="- 빼고 입력하세요" required></td>
+              </tr>
+              <tr>
+                <td><input id="user_address" type="text" name="user_address" required placeholder="주소"></td>
+              </tr>
+              <tr></tr>
+              <th>
+                <p>기타 개인설정</p>
+              </th>  
+            </table>
+            <div class="tbl_wrap">
+            <ul>
+                <li class="opt_chk">
+                    <label for="reg_mb_mailling" class="frm_label">메일링서비스</label>
+                    <input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" checked>
+                    정보 메일을 받겠습니다.  
+                </li>
+                <li>
+                  <span class="opt_chk">
+                      <label for="reg_mb_open" class="frm_label">정보공개</label>
+                      <input type="hidden" name="mb_open_default" value="">
+                      <input type="checkbox" name="mb_open" value="1" checked id="reg_mb_open">
+                    다른분들이 나의 정보를 볼 수 있도록 합니다.
+                    </span><br>
+                    <span class="frm_info">
+                        정보공개를 바꾸시면 앞으로 30일 이내에는 변경이 안됩니다.
+                    </span>                
+                </li>
+            </ul>
+            </div>
+          </div>
+          <button id="account" class="chkBtn" type="submit" onclick="checkForm()">회원 등록</button>
+        </fieldset>
+     </div>
+   </main>
+   <!--main 영역 끝 -->
+
+   <!--footer 영역 시작-->
+   <footer id="footer" class="footer">
+      <div class="footer-menu">
+        <div class="frame-sm">
+          <ul class="footer-menu-list">
+            <li> </li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#" class="text-black2 text-md">개인정보처리방침</a></li>
+          </ul><!--// footer-menu-list -->
+        </div><!--// footer-info-list -->
+      </div><!--// frame-sm -->
+      <div class="footer-info">
+        <strong class="footer-logo"><img src="../front/images/banners/logo.JPG" width="90px"></strong>
+        <div class="colum-info">
+          <h5 class="blind">회사 정보</h5>
+          <ul class="footer-biz-info">
+            <li><span class="company-name">(주)빼요 건강 LAB</span></li>
+            <li>대표 : 이소영</li>
+            <li>주소 : 별별특별시 지구 빼야지로 129,11 고양이버스타워</li>
+            <li>사업자등록번호 : 111-22-00000
+              <span class="biz-information">
+                <a href="#">사업자정보 확인</a>
+              </span>
+            </li>
+            <li>통신판매업신고번호 : 제1호</li>
+            <li>개인정보보호책임자 : 이우니</li>
+          </ul>
+          <p class="copyright">Copyright©빼요마켓 All rights reserved.</p>
+        </div><!--// colum -->
+        <div class="colum-info">
+          <ul class="customer-info">
+            <li class="cscenter">고객센터 <em class="footer-tel">02-1111-1111</em></li>
+            <li>FAX. 02-1111-0000</li>
+            <li>E-mail. admin@bbyo.com</li>
+          </ul>
+          <div class="customer-btns">
+            <a href="#"><span>고객 불편 사항</span></a>
+            <a href="#"><span>1:1문의</span></a>
+          </div>
+        </div><!--// colum -->
+      </div><!--// footer-info -->
+      <div class="footer-bottom">
+        <ul class="service-txt">
+          <li><a href="#"><i class="ico-footer-service01"></i>정보보호 관리체계 인증 획득</a></li>
+          <li><a href="#"><i class="ico-footer-service02"></i>은행 구매 안전 서비스 가입사실 확인</a></li>
+        </ul>
+      </div>
+    </footer>
+ </div>
+</body>
+</html>
